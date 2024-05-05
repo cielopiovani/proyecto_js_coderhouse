@@ -1,0 +1,42 @@
+/*********PARTE MEDIA PROYECTOS*********/
+
+.textProy {
+    padding: 5px;
+    margin: 10px;
+
+    a {
+        text-decoration: none;
+        color: $color-font-negro;
+        border: 1px solid $color-font-negro;
+        padding: 7px;
+        border-radius: 20px;
+        font-weight: 500;
+    }
+
+    a:hover {
+        border: none;
+        padding: 8px;
+        border-radius: 20px;
+        font-weight: 700;
+        background-color: $color-bg-crema;
+    }
+}
+
+.proyectos img {
+    border-radius: 1.5%;
+}
+
+.col-proyectos {
+
+    .imagen2 {
+        display:none;
+    }
+
+    :hover .imagen1 {
+        display: none;
+    }
+
+    :hover .imagen2 {
+        display: block;
+    }
+}

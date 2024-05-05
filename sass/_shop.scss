@@ -1,0 +1,87 @@
+/*********PARTE MEDIA SHOP*********/
+.productos img,
+.refTalles img,
+.proyectos img {
+  width: 100%;
+  height: auto;
+}
+
+.galeria h1 {
+  font-size: 16px;
+}
+
+.textProd a {
+  text-decoration: none;
+  font-weight: 600;
+  color: $color-font-negro;
+}
+
+.galeria a:hover {
+  font-style: italic;
+  font-weight: 800;
+  color: $color-font-negro;
+}
+
+.pay {
+  font-size: 12px;
+}
+
+.contenedor-img {
+  position: relative;
+  display: inline-block;
+
+  .stock {
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    flex-direction: column-reverse;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    padding: 2px 5px 2px 5px;
+    margin: 10px;
+    font-size: 13px;
+    background-color: $color-bg-negro;
+    border-radius: 20px;
+    color: $color-font-blanco;
+  }
+
+  figcaption {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $color-font-blanco;
+    font-weight: 500;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    background-color: #857362c0;
+    display: none;
+  }
+
+  .text-figcaption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  p {
+    font-size: 14px;
+    font-weight: 300;
+  }
+
+  img {
+    height: auto;
+    width: 100%;
+  }
+
+}
+
+.contenedor-img:hover figcaption {
+  display: block;
+}
+
+

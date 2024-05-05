@@ -1,0 +1,38 @@
+/********** MEDIA QUERIES ***********/
+
+/*MEDIA QUERIES TABLET*/
+
+@media only screen and (min-width:700px) {
+    .imgFondo {
+        background-image: url('../multimedia/foto_fondo_desktop.jpg');
+        background-size: cover;
+        height: 100vh;
+    }
+    .shopicon .acceder-shop {
+        font-size: 25px;
+    }
+}
+
+.subscribe-area {
+    text-align: center;
+
+    .subscribe-form {
+        margin-top: 10px;
+    }
+    button {
+        margin-top: 15px;
+    }
+}
+
+@media(max-width: 990px) {
+    .sidebar {
+        background-color: $color-bg-crema;
+    }
+}
+
+/*MEDIA QUERIES DESKTOP*/
+@media(min-width: 990px) {
+    .imgFondo {
+        height: 800px;
+    }
+}

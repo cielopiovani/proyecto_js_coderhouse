@@ -1,0 +1,44 @@
+/**********FOOTER*********/
+footer {
+    text-align: center;
+    background-color: $color-bg-crema;
+    padding: 20px;
+    font-size: 14px;
+}
+
+.navInf a,
+.redes a,
+.contacto a {
+    text-decoration: none;
+    color: $color-font-negro;
+}
+
+.navInf a:hover,
+.contacto a:hover {
+    font-style: italic;
+    font-weight: 600;
+}
+
+.redes {
+    letter-spacing: 10px;
+    margin: 10px;
+}
+
+.what {   
+    height: 50px;
+    width: 50px;
+    color: $color-font-blanco;
+    background-color: $color-bg-negro;
+    text-decoration: none;
+    position: fixed;
+    right: 40px;
+    bottom: 40px;
+    text-align: center;
+    font-size: 33px;
+    border-radius: 50px;
+
+    :hover {
+        color: $color-bg-crema ;
+    }
+
+}

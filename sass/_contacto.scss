@@ -1,0 +1,48 @@
+/*********PARTE MEDIA CONTACTO*********/
+
+.contact-area {
+    padding-top: 10px;    
+    padding-bottom: 50px;
+}
+
+.contact-wrapper {
+    overflow: hidden;
+}
+
+.contact-form {
+    input, textarea {
+        background:$color-bg-crema;
+        border: transparent;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        border-radius: 10px;
+        color: $color-font-negro;
+        display: inline-block;
+        font-size: 15px;
+        font-weight: 300;
+        height: 50px;
+        padding-left: 35px;
+        width: 70%;
+        cursor: pointer;
+    }
+
+    textarea {
+        height: 100px;
+        padding-top: 10px;
+    }
+}
+
+.button-contact {
+    @include botton;
+    background-color: $color-bg-negro;
+    color: $color-font-blanco;
+
+    &:hover {
+        background-color: $color-bg-crema;
+        color: $color-font-negro;
+    }
+}
+
+.iframe {
+    filter: grayscale(50%);
+}

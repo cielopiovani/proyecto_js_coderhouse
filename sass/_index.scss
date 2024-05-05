@@ -1,0 +1,85 @@
+/*********PARTE MEDIA INDEX*********/
+
+.imgFondo {
+    background-image: url('../multimedia/foto_fondo_mobile.png');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+
+    .shopicon {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: end;
+        height: 76vh;
+    }
+    .acceder-shop {
+        @include botton;
+        text-decoration: none;
+    }
+
+    .shopicon a:hover {
+        background-color: $color-bg-negro;
+        color: $color-font-blanco;
+    }
+}
+
+.vision {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+
+    .item{
+        width: 180px;
+        height: 180px;
+        margin: 50px 10px 0px;
+        font-size: 20px;
+        text-align: center;
+    }
+
+    a {
+        text-decoration: none;
+        color: $color-font-negro;
+    }
+
+    i {
+        font-size: 50px;
+        animation-name: rotacion;
+        animation-duration: 12s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        display: inline-block;
+    }
+
+    @keyframes rotacion {
+        from {
+            transform: rotate(0deg);
+        }
+        to {
+            transform: rotate(800deg);
+        }
+    }
+
+}
+
+.textFilo {
+    width: 100%;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 40px;
+    margin: 40px 0 60px;
+    padding: 20px;
+
+    h1 {
+        text-transform: uppercase;
+        font-weight: 200;
+    }
+
+    .text1,
+    .text2,
+    .text3 {
+        text-align: center;
+        align-items: center;
+    }
+}

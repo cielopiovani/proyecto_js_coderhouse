@@ -1,0 +1,20 @@
+/*********PARTE SUPERIOR COMPARTIDA*********/
+
+.marquee {
+    color: $color-font-blanco;
+    background-color: $color-bg-casinegro;
+    font-size: 14px;
+    padding: 4px 0px 0px;
+    font-weight: 500;
+}
+
+/*********inicio navbar*********/
+
+.btn-signup {
+    background-color: $color-bg-casinegro;
+    border-radius: 20px;
+}
+
+.navbar .nav-item a:hover {
+    font-weight: 700;
+}

@@ -1,0 +1,432 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500&display=swap");
+body {
+  font-family: "Roboto", sans-serif;
+  color: #000000;
+}
+
+/*********PARTE SUPERIOR COMPARTIDA*********/
+.marquee {
+  color: #ffffff;
+  background-color: rgba(0, 0, 0, 0.8549019608);
+  font-size: 14px;
+  padding: 4px 0px 0px;
+  font-weight: 500;
+}
+
+/*********inicio navbar*********/
+.btn-signup {
+  background-color: rgba(0, 0, 0, 0.8549019608);
+  border-radius: 20px;
+}
+
+.navbar .nav-item a:hover {
+  font-weight: 700;
+}
+
+/*********PARTE MEDIA INDEX*********/
+.imgFondo {
+  background-image: url("../multimedia/foto_fondo_mobile.png");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+.imgFondo .shopicon {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: end;
+  height: 76vh;
+}
+.imgFondo .acceder-shop {
+  background-color: #ffffff;
+  border: none;
+  border-radius: 30px;
+  color: #000000;
+  display: inline-block;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1;
+  padding: 10px 30px;
+  transition: all 0.3s ease 0s;
+  text-decoration: none;
+}
+.imgFondo .shopicon a:hover {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.vision {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+.vision .item {
+  width: 180px;
+  height: 180px;
+  margin: 50px 10px 0px;
+  font-size: 20px;
+  text-align: center;
+}
+.vision a {
+  text-decoration: none;
+  color: #000000;
+}
+.vision i {
+  font-size: 50px;
+  animation-name: rotacion;
+  animation-duration: 12s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  display: inline-block;
+}
+@keyframes rotacion {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(800deg);
+  }
+}
+
+.textFilo {
+  width: 100%;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 40px;
+  margin: 40px 0 60px;
+  padding: 20px;
+}
+.textFilo h1 {
+  text-transform: uppercase;
+  font-weight: 200;
+}
+.textFilo .text1,
+.textFilo .text2,
+.textFilo .text3 {
+  text-align: center;
+  align-items: center;
+}
+
+/*********PARTE MEDIA SHOP*********/
+.productos img,
+.refTalles img,
+.proyectos img {
+  width: 100%;
+  height: auto;
+}
+
+.galeria h1 {
+  font-size: 16px;
+}
+
+.textProd a {
+  text-decoration: none;
+  font-weight: 600;
+  color: #000000;
+}
+
+.galeria a:hover {
+  font-style: italic;
+  font-weight: 800;
+  color: #000000;
+}
+
+.pay {
+  font-size: 12px;
+}
+
+.contenedor-img {
+  position: relative;
+  display: inline-block;
+}
+.contenedor-img .stock {
+  display: flex;
+  justify-content: end;
+  align-items: end;
+  flex-direction: column-reverse;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  padding: 2px 5px 2px 5px;
+  margin: 10px;
+  font-size: 13px;
+  background-color: #000000;
+  border-radius: 20px;
+  color: #ffffff;
+}
+.contenedor-img figcaption {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-weight: 500;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  right: 0px;
+  background-color: rgba(133, 115, 98, 0.7529411765);
+  display: none;
+}
+.contenedor-img .text-figcaption {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.contenedor-img p {
+  font-size: 14px;
+  font-weight: 300;
+}
+.contenedor-img img {
+  height: auto;
+  width: 100%;
+}
+
+.contenedor-img:hover figcaption {
+  display: block;
+}
+
+/*********PARTE MEDIA PROYECTOS*********/
+.textProy {
+  padding: 5px;
+  margin: 10px;
+}
+.textProy a {
+  text-decoration: none;
+  color: #000000;
+  border: 1px solid #000000;
+  padding: 7px;
+  border-radius: 20px;
+  font-weight: 500;
+}
+.textProy a:hover {
+  border: none;
+  padding: 8px;
+  border-radius: 20px;
+  font-weight: 700;
+  background-color: #FDEBC3;
+}
+
+.proyectos img {
+  border-radius: 1.5%;
+}
+
+.col-proyectos .imagen2 {
+  display: none;
+}
+.col-proyectos :hover .imagen1 {
+  display: none;
+}
+.col-proyectos :hover .imagen2 {
+  display: block;
+}
+
+/*********PARTE MEDIA ACERCA DE*********/
+.colorFondo {
+  background-color: rgba(253, 235, 195, 0.2666666667);
+}
+.colorFondo .textosDesarrollo h1 {
+  padding: 30px 60px 10px 60px;
+  font-size: 42px;
+  line-height: 40px;
+  font-weight: 300;
+}
+.colorFondo .textosDesarrollo h2 {
+  padding: 30px;
+  font-size: 26px;
+  line-height: 35px;
+  font-weight: 300;
+}
+.colorFondo .refTalles p {
+  padding: 5px 20px 0px 20px;
+  font-size: 14px;
+}
+
+/*********PARTE MEDIA CONTACTO*********/
+.contact-area {
+  padding-top: 10px;
+  padding-bottom: 50px;
+}
+
+.contact-wrapper {
+  overflow: hidden;
+}
+
+.contact-form input, .contact-form textarea {
+  background: #FDEBC3;
+  border: transparent;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  color: #000000;
+  display: inline-block;
+  font-size: 15px;
+  font-weight: 300;
+  height: 50px;
+  padding-left: 35px;
+  width: 70%;
+  cursor: pointer;
+}
+.contact-form textarea {
+  height: 100px;
+  padding-top: 10px;
+}
+
+.button-contact {
+  background-color: #ffffff;
+  border: none;
+  border-radius: 30px;
+  color: #000000;
+  display: inline-block;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1;
+  padding: 10px 30px;
+  transition: all 0.3s ease 0s;
+  background-color: #000000;
+  color: #ffffff;
+}
+.button-contact:hover {
+  background-color: #FDEBC3;
+  color: #000000;
+}
+
+.iframe {
+  filter: grayscale(50%);
+}
+
+/***********PARTE MEDIA - NEWSLETTER**********/
+.subscribe-area {
+  background-color: #000000;
+  padding-bottom: 50px;
+  padding-top: 70px;
+  margin-bottom: 15;
+}
+
+.subscribe-text h1 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 5px;
+  margin-bottom: 15px;
+}
+.subscribe-text p {
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 300;
+  margin-bottom: 0;
+  margin-top: 6px;
+}
+
+.subscribe-wrapper {
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+
+.subscribe2-wrapper .subscribe-form input {
+  background: none;
+  border: 1px solid #ffffff;
+  border-radius: 30px;
+  color: #ffffff;
+  display: inline-block;
+  font-size: 15px;
+  font-weight: 300;
+  height: 57px;
+  margin-right: 17px;
+  padding-left: 35px;
+  width: 70%;
+  cursor: pointer;
+}
+.subscribe2-wrapper .subscribe-form button {
+  background-color: #ffffff;
+  border: none;
+  border-radius: 30px;
+  color: #000000;
+  display: inline-block;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1;
+  padding: 10px 30px;
+  transition: all 0.3s ease 0s;
+}
+
+/**********FOOTER*********/
+footer {
+  text-align: center;
+  background-color: #FDEBC3;
+  padding: 20px;
+  font-size: 14px;
+}
+
+.navInf a,
+.redes a,
+.contacto a {
+  text-decoration: none;
+  color: #000000;
+}
+
+.navInf a:hover,
+.contacto a:hover {
+  font-style: italic;
+  font-weight: 600;
+}
+
+.redes {
+  letter-spacing: 10px;
+  margin: 10px;
+}
+
+.what {
+  height: 50px;
+  width: 50px;
+  color: #ffffff;
+  background-color: #000000;
+  text-decoration: none;
+  position: fixed;
+  right: 40px;
+  bottom: 40px;
+  text-align: center;
+  font-size: 33px;
+  border-radius: 50px;
+}
+.what :hover {
+  color: #FDEBC3;
+}
+
+/********** MEDIA QUERIES ***********/
+/*MEDIA QUERIES TABLET*/
+@media only screen and (min-width: 700px) {
+  .imgFondo {
+    background-image: url("../multimedia/foto_fondo_desktop.jpg");
+    background-size: cover;
+    height: 100vh;
+  }
+  .shopicon .acceder-shop {
+    font-size: 25px;
+  }
+}
+.subscribe-area {
+  text-align: center;
+}
+.subscribe-area .subscribe-form {
+  margin-top: 10px;
+}
+.subscribe-area button {
+  margin-top: 15px;
+}
+
+@media (max-width: 990px) {
+  .sidebar {
+    background-color: #FDEBC3;
+  }
+}
+/*MEDIA QUERIES DESKTOP*/
+@media (min-width: 990px) {
+  .imgFondo {
+    height: 800px;
+  }
+}
+
+/*# sourceMappingURL=estilo.css.map */

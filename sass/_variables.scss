@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500&display=swap');
+
+// Variables
+// Colores fondo
+$color-bg-negro: #000000;
+$color-bg-casinegro: #000000da;
+$color-bg-crema: #FDEBC3;
+$color-bg-cremaclaro: #fdebc344;
+$color-bg-blanco: #ffffff;
+
+// Colores tipografia
+$color-font-negro: #000000;
+$color-font-crema: #F3D98B;
+$color-font-blanco: #ffffff;
+
+//Tipografía
+$font1: 'Roboto', sans-serif, ;
+
+body {
+  font-family: $font1;
+  color: $color-font-negro;
+}
+
+
+@mixin botton {
+  background-color: $color-bg-blanco;
+  border: none;
+  border-radius: 30px;
+  color: $color-font-negro;
+  display: inline-block;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1;
+  padding: 10px 30px;
+  transition: all 0.3s ease 0s;
+}

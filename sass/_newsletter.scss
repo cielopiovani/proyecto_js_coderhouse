@@ -1,0 +1,53 @@
+/***********PARTE MEDIA - NEWSLETTER**********/
+
+.subscribe-area {
+    background-color:$color-bg-negro;
+    padding-bottom: 50px;
+    padding-top: 70px;
+    margin-bottom: 15;
+}
+
+.subscribe-text {
+    h1 {
+        font-size: 20px;
+        font-weight: 700;
+        color: $color-font-blanco;
+        letter-spacing: 5px;
+        margin-bottom: 15px;
+    }
+
+    p {
+        color: $color-font-blanco;
+        font-size: 12px;
+        font-weight: 300;
+        margin-bottom: 0;
+        margin-top: 6px;
+    }
+}
+
+.subscribe-wrapper {
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+.subscribe2-wrapper .subscribe-form {
+    input {
+        background: none;
+        border: 1px solid $color-font-blanco;
+        border-radius: 30px;
+        color: $color-font-blanco;
+        display: inline-block;
+        font-size: 15px;
+        font-weight: 300;
+        height: 57px;
+        margin-right: 17px;
+        padding-left: 35px;
+        width: 70%;
+        cursor: pointer;
+    }
+
+    button {
+        @include botton;
+    }
+
+}
