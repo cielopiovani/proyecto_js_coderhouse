@@ -1,7 +1,7 @@
 // Determinar el talle de corpinios con condicional
 
-let busto = parseInt(prompt("Hola " + nombre + "ingresá tu medida de busto:"));
-let bajoBusto = parseInt(prompt("Ingresa tu medida de bajo busto:"));
+let busto = parseInt(prompt("Ingresá tu medida de busto en cm:"));
+let bajoBusto = parseInt(prompt("Ingresá tu medida de bajo busto en cm:"));
 
 let talleCorpinio = "";
 
@@ -27,22 +27,22 @@ if (talleCorpinio == "") {
 
 // Determinar el talle de bombachas con condicional
 
-let cintura = parseInt(prompt("Ingresá tu medida de cintura:"));
-let cadera = parseInt(prompt("Ingresa tu medida de cadera:"));
+let cintura = parseInt(prompt("Ingresá tu medida de cintura en cm:"));
+let cadera = parseInt(prompt("Ingresá tu medida de cadera en cm:"));
 
 let talleBombacha = "";
 
-if ((cintura >= 60 && cintura <= 70) && (cadera >= 75 && cadera <= 90)) {
+if ((cadera >= 70 && cadera <= 94) && (cintura >= 58 && cintura <= 68)) {
     talleBombacha = "S";
-} else if ((cintura >= 71 && cintura <= 76) && (cadera >= 91 && cadera <= 100)) {
+} else if ((cadera >= 95 && cadera <= 100) && (cintura >= 60 && cintura <= 76)) {
     talleBombacha = "M";
-} else if ((cintura >= 77 && cintura <= 84) && (cadera >= 101 && cadera <= 109)) {
+} else if ((cadera >= 101 && cadera <= 110) && (cintura >= 69 && cintura <= 86)) {
     talleBombacha = "L";
-} else if ((cintura >= 85 && cintura <= 92) && (cadera >= 109 && cadera <= 115)) {
+} else if ((cadera >= 111 && cadera <= 115) && (cintura >= 77 && cintura <= 92)) {
     talleBombacha = "XL";
-} else if ((cintura >= 92 && cintura <= 99) && (cadera >= 116 && cadera <= 124)) {
+} else if ((cadera >= 116 && cadera <= 125) && (cintura >= 87 && cintura <= 105)) {
     talleBombacha = "2XL";
-} else if ((cintura >= 100 && cintura <= 110) && (cadera >= 125 && cadera <= 130)) {
+} else if ((cadera >= 126 && cadera <= 135) && (cintura >= 93 && cintura <= 115)) {
     talleBombacha = "3XL";
 } 
 if (talleBombacha == "") {
@@ -52,18 +52,17 @@ if (talleBombacha == "") {
 }
 
 
-// Funcion para calcular total: bucle
+// Calculando la cantidad de prendas con bucle
 
-let productos = ["corpiño Viento Sur", "bombacha Viento Sur"];
+let productos = ["corpiño Viento Sur", "bombacha Viento Norte"];
 let precios = [15000, 10000]
 
 let subTotal = 0;
 let cantTotal = 0;
 for (let i = 0; i < 2; i++){
     let cantidad = parseInt(prompt(
-        "Ingrese la cantidad de " + productos[i] + " talle " 
-        + talleCorpinio + 
-        " que quieres llevar"
+        "Ingresá la cantidad de " + productos[i] +  
+        " que quieres llevar:"
     ))
     subTotal += cantidad * precios[i];
     cantTotal += cantidad;
@@ -71,7 +70,7 @@ for (let i = 0; i < 2; i++){
 
 
 
-// Funcion para calcular total funcion
+// Calculando el importe final con descuentos con una función
 
 function descuento (cantidad) {
     if (cantidad >= 6) {
@@ -88,10 +87,9 @@ if (dto > 0) {
     alert(
         "Felicitaciones! Obtuviste un " + 
         dto + 
-        "% de decuento. El precio total es: ARS " +
+        "% de decuento. El precio total de tu compra es: ARS " +
         subTotal * (1 - dto/100)
     )
 } else {
-    alert("El precio total es: ARS " + subTotal * (1 - dto/100))
+    alert("El precio total de tu compra es: ARS " + subTotal * (1 - dto/100))
 }
-
