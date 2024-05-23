@@ -1,6 +1,8 @@
 // Determinar el talle de corpinios con condicional
 
-let busto = parseInt(prompt("Ingresá tu medida de busto en cm:"));
+alert("Hola! Bienvenida a la TIENDA ONLINE DE DUNAS. Vamos a elegir el talle correcto para vos.");
+
+let busto = parseInt(prompt("Tenemos seis talles disponibles de corpiños, que van desde 60cm a 130cm de busto. Ingresá tu medida de busto en cm:"));
 let bajoBusto = parseInt(prompt("Ingresá tu medida de bajo busto en cm:"));
 
 let talleCorpinio = "";
@@ -27,7 +29,7 @@ if (talleCorpinio == "") {
 
 // Determinar el talle de bombachas con condicional
 
-let cintura = parseInt(prompt("Ingresá tu medida de cintura en cm:"));
+let cintura = parseInt(prompt("Tenemos seis talles disponibles de bombachas, de 70cm a 135cm de cadera. Ingresá tu medida de cintura en cm:"));
 let cadera = parseInt(prompt("Ingresá tu medida de cadera en cm:"));
 
 let talleBombacha = "";
@@ -51,45 +53,90 @@ if (talleBombacha == "") {
     alert("Tu talle sugerido para bombachas es " + talleBombacha)
 }
 
+alert(
+    "Ahora que ya sabes tu talle, podemos continuar a realizar el pedido."
+)
 
-// Calculando la cantidad de prendas con bucle
+// Creando objeto con class constructor
 
-let productos = ["corpiño Viento Sur", "bombacha Viento Norte"];
-let precios = [15000, 10000]
-
-let subTotal = 0;
-let cantTotal = 0;
-for (let i = 0; i < 2; i++){
-    let cantidad = parseInt(prompt(
-        "Ingresá la cantidad de " + productos[i] +  
-        " que quieres llevar:"
-    ))
-    subTotal += cantidad * precios[i];
-    cantTotal += cantidad;
-}
+class Producto {
+    constructor (titulo, precio, color, stock) {
+        this.titulo = titulo;
+        this.precio = precio;
+        this.color = color;
+        this.stock = stock;
+        this.cantRequerido = 0;
+    }        
+    subTotal () {return this.cantRequerido * this.precio}
+    }
 
 
+// Declarando los objetos
 
-// Calculando el importe final con descuentos con una función
+const Producto1 = new Producto ("Corpiño Viento Sur", 30000, "negro", 10);
+const Producto2 = new Producto ("Bombacha Viento Sur", 15000, "negro", 8);
+const Producto3 = new Producto ("Corpiño Claromeco", 30000, "chocolate", 6);
+const Producto4 = new Producto ("Bombacha Claromeco", 15500, "chocolate", 20);
 
-function descuento (cantidad) {
-    if (cantidad >= 6) {
+const prendas = [Producto1, Producto2, Producto3, Producto4];
+
+// Productos disponibles
+
+const prendasDisponibles = prendas.reduce(
+    (acc, prenda) => acc + "- " + prenda.titulo + " " + prenda.color + " $" + prenda.precio + "\n",
+    "Por el momento, tenemos disponibles las siguientes prendas: \n"
+);
+
+alert(prendasDisponibles);
+
+
+// PEDIDO
+
+let pedido = [];
+
+prendas.forEach ((prenda) => {
+    prenda.cantRequerido = prompt(
+        "Ingrese la cantidad de " +
+        prenda.titulo +
+        " que quiere llevar. Si no desea llevar éste artículo ingrese 0"
+    );
+    pedido.push(prenda);
+});
+
+
+let total = 0;
+let resumen = "";
+
+pedido.forEach((prenda) => {
+    console.log(prenda.titulo + " | Subtotal: ARS " + prenda.subTotal());
+    total += prenda.subTotal()
+    resumen += " - " + prenda.titulo + " | " + "Cantidad: " + prenda.cantRequerido + " | Subotal producto $" + prenda.subTotal() + "\n"     
+})
+
+alert(
+    "¡Perfecto! Su pedido es: \n" +
+    resumen + 
+    "El subtotal de su pedido es de $" + total + " ARS "
+);
+
+function descuento (total) {
+    if (total >= 150000) {
         return 25.0
-    } else if (cantidad >= 3) {
+    } else if (total >= 100000) {
         return 15.0
     } else {
         return 0.0
     }
 }
 
-let dto = descuento(cantTotal);
+let dto = descuento(total);
 if (dto > 0) {
     alert(
-        "Felicitaciones! Obtuviste un " + 
+        "¡Felicitaciones! Como superaste los valores promedio de venta obtuviste un " + 
         dto + 
-        "% de decuento. El precio total de tu compra es: ARS " +
-        subTotal * (1 - dto/100)
+        "% de decuento. El precio total de tu compra es: $" +
+        total * (1 - dto/100) + "ARS ¡Gracias por comprar en DUNAS"
     )
 } else {
-    alert("El precio total de tu compra es: ARS " + subTotal * (1 - dto/100))
+    alert("El precio total de tu compra es: $" + total * (1 - dto/100) + " ARS ¡Gracias por comprar en DUNAS")
 }
