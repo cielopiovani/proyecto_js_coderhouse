@@ -143,13 +143,87 @@
 
       <div class="textosDesarrollo text-center">
         <h2>
-          Sabemos que elegir el talle puede es complicado. Pero, ¡No te
-          preocupes! A continuación encontraras fotos de amigas como referencias
-          (busto-cintura-cadera), y luego a AWI que te enseñará a como tomar tus
-          medidas. Recuerda anotarlas, y compararlas con la tabla de talle que
-          figura en cada artículo en la sección shop.
+          Sabemos que elegir el talle puede es complicado. Pero,
+          ¡No te preocupes! Hemos desarrollado un sistema, para recomendarme con presición
+          el talle adecuado para vos.
+          Toma tu centímetro (o una cinta que luego puedes medir con una regla)
+          y sigue los siguientes pasos:
         </h2>
       </div>
+
+        <div class="container-fluid">
+          <div class="row refTalles text-center">
+            <div class="col-12 col-md-3 p-0 text-center refTalles">
+              <h2>1</h2>
+              <img src="../multimedia/ref_talles_5.png" alt="reftalles5"/>
+                    <p> BUSTO <br>
+                    Mide alrededor de la parte más prominente de tu
+                    busto.
+                    </p>
+            </div>
+            <div class="col-12 col-md-3 p-0 text-center refTalles">
+              <h2>2</h2>
+              <img src="../multimedia/ref_talles_6.png" alt="reftalles6" />
+              <p>
+                BAJO BUSTO O ESPALDA <br>
+                Mide por debajo del busto (ésta
+                medida es importante para que el elástico de los corpiños no te
+                apriete).
+              </p>
+            </div>
+            <div class="col-12 col-md-3 p-0 text-center refTalles">
+              <h2>3</h2>
+              <img src="../multimedia/ref_talles_7.png" alt="reftalles7" />
+              <p>
+                CINTURA <br>
+                Mide tu cuerpo en la parte más angosta de la
+                cintura.
+              </p>
+            </div>
+            <div class="col-12 col-md-3 p-0 text-center refTalles">
+              <h2>4</h2>
+              <img src="../multimedia/ref_talles_8.png" alt="reftalles8" />
+              <p>
+                CADERAS <br>
+                Mídete sobre tu cuerpo, en donde las caderas se
+                hacen más prominentes.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <h3>Para calcular tu talle, primero debés pasarnos tus medidas en centímetros</h3>
+
+        <div class="contenedorTalles">
+            <form action="" id="form-talles">
+                <p>Nuestros talles para prendas superiores abarcan desde 75cm a 130cm de busto. 
+                ¿Cuáles son tus medidas?</p>
+                <label for="busto">Medida de busto (cm):</label>
+                <input type="number" id="busto" name="busto" required>
+                <label for="bajoBusto">Medida de bajo busto (cm):</label>
+                <input type="number" id="bajoBusto" name="bajoBusto" required>
+                <button type="button" id="calcularTalleSuperior">VER TALLE</button>
+                
+                <div id="resultadoTallesSuperiores" class="resultadoTalles"> </div>
+    
+                <p>Nuestros talles para prendas inferiores abarcan desde 70cm a 135cm de cadera. 
+                ¿Cuáles son tus medidas?</p>
+                <label for="cintura">Medida de cintura (cm):</label>
+                <input type="number" id="cintura" name="cintura" required>
+                <label for="cadera">Medida de cadera (cm):</label>
+                <input type="number" id="cadera" name="cadera" required>
+                <button type="button" id="calcularTalleInferior">VER TALLE</button>
+    
+                <div id="resultadoTallesInferiores" class="resultadoTalles"> </div>
+            </form>
+        </div>
+<!-- 
+      <div class="textosDesarrollo text-center">
+        <h2>A continuación encontraras fotos de amigas como referencias
+          (busto-cintura-cadera), para que compares con tus medidas y elijas el talle en base a comparaciones.
+        </h2>
+      </div>
+
       <div class="container-fluid">
         <div class="row refTalles text-center">
           <div class="col-12 col-md-3 p-0 text-center refTalles">
@@ -194,57 +268,13 @@
           </div>
         </div>
       </div>
-
-      <div class="textosDesarrollo text-center">
-        <h2>
-          Toma tu centímetro (o una cinta que luego puedes medir con una regla)
-          y sigue los siguientes pasos:
-        </h2>
-        <div class="container-fluid">
-          <div class="row refTalles text-center">
-            <div class="col-12 col-md-3 p-0 text-center refTalles">
-              <h2>1</h2>
-              <img src="../multimedia/ref_talles_5.png" alt="reftalles5"/>
-                    <p> BUSTO <br>
-                    Mide alrededor de la parte más prominente de tu
-                    busto.
-                    </p>
-            </div>
-            <div class="col-12 col-md-3 p-0 text-center refTalles">
-              <h2>2</h2>
-              <img src="../multimedia/ref_talles_6.png" alt="reftalles6" />
-              <p>
-                BAJO BUSTO O ESPALDA <br>
-                Mide por debajo del busto (ésta
-                medida es importante para que el elástico de los corpiños no te
-                apriete).
-              </p>
-            </div>
-            <div class="col-12 col-md-3 p-0 text-center refTalles">
-              <h2>3</h2>
-              <img src="../multimedia/ref_talles_7.png" alt="reftalles7" />
-              <p>
-                CINTURA <br>
-                Mide tu cuerpo en la parte más angosta de la
-                cintura.
-              </p>
-            </div>
-            <div class="col-12 col-md-3 p-0 text-center refTalles">
-              <h2>4</h2>
-              <img src="../multimedia/ref_talles_8.png" alt="reftalles8" />
-              <p>
-                CADERAS <br>
-                Mídete sobre tu cuerpo, en donde las caderas se
-                hacen más prominentes.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="textosDesarrollo text-center">
-          <h2>Si aún tienes dudas, ¡Escríbenos! Estamos para ayudarte.</h2>
-        </div>
-      </div>
     </div>
+
+
+    <div class="textosDesarrollo text-center">
+      <h2>Si aún tienes dudas, ¡Escríbenos! Estamos para ayudarte.</h2>
+    </div> -->
+
 
     <!--ARRANCA SECTION NEWSLETER-->
     <section class="subscribe-area">
@@ -336,5 +366,9 @@
       crossorigin="anonymous"
     ></script>
     <!-- BOOTSTRAP JS BUNDLE finaliza -->
+  </div>
+
+  <script src="../js/talles.js"></script>
+
   </body>
 </html>

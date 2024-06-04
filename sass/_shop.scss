@@ -1,8 +1,14 @@
 /*********PARTE MEDIA SHOP*********/
+
+.contenedor-hola {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
 .productos img,
 .refTalles img,
 .proyectos img {
-  width: 100%;
+  max-width: 100%;
   height: auto;
 }
 
@@ -29,6 +35,7 @@
 .contenedor-img {
   position: relative;
   display: inline-block;
+  max-width: 100%;
 
   .stock {
     display: flex;
@@ -45,6 +52,7 @@
     border-radius: 20px;
     color: $color-font-blanco;
   }
+
 
   figcaption {
     position: absolute;

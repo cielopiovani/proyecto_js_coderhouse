@@ -2,7 +2,6 @@
 body {
   font-family: "Roboto", sans-serif;
   color: #000000;
-  overflow-x: hidden;
 }
 
 /*********PARTE SUPERIOR COMPARTIDA*********/
@@ -110,40 +109,20 @@ body {
 }
 
 /*********PARTE MEDIA SHOP*********/
-
-.contenedor-productos {
+.contenedor-hola {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  text-align: center;
-}
-
-.contenedor-producto {
-  display: flex;
-  flex-direction: column;
 }
 
 .productos img,
 .refTalles img,
 .proyectos img {
-  width: 100%;
+  max-width: 100%;
   height: auto;
 }
 
-.textProd {
-  margin: 10px;
-  padding: 4px;
-}
-
-.precio {
-  font-size: 18px;
-}
-
-.pay {
-  font-size: 12px;
-}
-
-.textProd h1 {
-  font-size: 18px;
+.galeria h1 {
+  font-size: 16px;
 }
 
 .textProd a {
@@ -158,12 +137,16 @@ body {
   color: #000000;
 }
 
+.pay {
+  font-size: 12px;
+}
 
 .contenedor-img {
   position: relative;
   display: inline-block;
+  max-width: 100%;
 }
-.contenedor-img .stock{
+.contenedor-img .stock {
   display: flex;
   justify-content: end;
   align-items: end;
@@ -207,14 +190,6 @@ body {
   width: 100%;
 }
 
-.boton-talle, .boton-agregar {
-  color: white;
-  background-color: black;
-  border-radius: 20px;
-  padding: 5px;
-}
-
-
 .contenedor-img:hover figcaption {
   display: block;
 }
@@ -253,14 +228,6 @@ body {
 .col-proyectos :hover .imagen2 {
   display: block;
 }
-
-/*********PARTE MEDIA TALLES*********/
-
-h3,
-.contenedorTalles {
-  text-align: center;
-}
-
 
 /*********PARTE MEDIA ACERCA DE*********/
 .colorFondo {
@@ -466,7 +433,4 @@ footer {
   .imgFondo {
     height: 800px;
   }
-}
-
-/*# sourceMappingURL=estilo.css.map */
-
+}/*# sourceMappingURL=estilo.css.map */
